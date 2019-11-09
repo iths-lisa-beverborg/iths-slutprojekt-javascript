@@ -1,0 +1,516 @@
+
+/* Core Styles */
+
+body{
+    margin: 0;
+    background-color: rgb(219,200,183);
+    font-family:'Ubuntu', sans-serif;
+    text-align: center;
+}
+  
+h1{
+    margin: 1rem 2rem 0 2rem;
+    font-family: 'Kreon', serif;
+    font-size: 3rem;
+    color: rgb(143,132,130);
+}
+
+h2{
+    font-family: 'Kreon', serif;
+}
+ 
+p{
+    margin: 0;
+    padding: 1em;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+
+/* ------------- HEADER ----------------*/
+
+header{
+    height: 30vh;
+    padding: 10px;
+    opacity: 0.8;
+    background-image: url("./resources/header@640x360.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;   
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header i.material-icons{
+    font-size: 2rem;  
+}
+
+
+/* --------- Navigation -----------*/
+
+nav{
+    display:flex;
+    flex-direction: column; 
+    position: fixed;
+    right: 0;
+    background-color: rgb(183,203,194);
+    height: 100vh;
+    width: 50vw;
+    z-index: 2;
+    transition: right 0.25s ease-out;
+}
+
+.menu-hidden{
+    right: -100vw;
+}
+
+.hidden{
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.fade-layer{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+nav a{
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    color:  rgb(87, 86, 85);  
+    font-weight: bold;
+    padding: 1rem;
+    transition: background-color 0.2s;
+}
+
+nav a:hover{
+    background-color: rgba(0,0,0,0.25) 
+}
+
+
+/* ------------- MAIN/ CARDS -------------------*/
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card{
+    margin: 2rem;
+    border: 0.3rem solid rgb(143,132,130);   
+    background-color: #556273;
+}
+
+.button-card{
+	-moz-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
+	-webkit-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
+	box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
+	background-color:  rgb(183,203,194);
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid  rgb(183,203,194);
+	display:inline-block;
+	cursor:pointer;
+    color: black;
+    font-family:'Ubuntu', sans-serif;
+    font-size:1rem;
+	padding:4px 16px;
+	text-decoration:none;
+    margin-bottom: 3rem;
+}
+    
+.button-card:hover {
+	background-color: rgb(241,242,237);
+}
+
+
+/*-------------- Aside ----------------*/
+
+.infobox{
+    background-color: rgb(183,203,194); 
+    margin: 0 0  4em 0;
+    padding: 2rem;
+}
+
+.infobox p{
+    padding: 20px;
+}
+
+/*.infobox img{
+    width: 60%;
+    height: auto;
+}
+*/
+/* ----------- Welcome text --------------*/
+
+.profile-pic{
+    border-radius: 50%;
+}
+
+/* ----------------Newsletter-------------*/
+
+#button-submit{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    background-color: #556273;
+    color: white; 
+    border:none;
+}
+
+
+/* -------------------- footer ----------------*/
+
+footer{
+    height: 200px;
+    padding: 20px;
+    background-image: url("./resources/footer@640x427.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;   
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around; 
+}
+
+footer a{   
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* -----------------Genre mobile page -------------------*/
+
+.card-genre{
+    height:12rem;
+    margin: 2rem;
+    font-size: 2rem; 
+    border: 0.3rem solid rgb(143,132,130); 
+    background-color: #556273;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-genre{
+    padding: 0;
+    font-size: 2rem; 
+    border: none; 
+    background-color: #556273
+}
+
+
+/*--------------------Blog entry mobile---------------------*/
+
+.blogentry h3{
+    margin: 1rem;
+    font-family: 'Kreon', serif;
+    font-size: 2rem;
+    color: #8f8482;
+}
+
+.blogentry p{
+    font-size: 1.2rem; 
+}
+/*.blogentry img{
+    width: 100%;
+    height: auto; 
+}
+*/
+
+.blogentry {
+    height: auto;
+    margin: 2rem;
+    border: 0.3rem solid rgb(143,132,130); 
+    background-color: #556273;
+}
+
+
+/*-------------------------------------------------------------------------------------DESKTOP-------------------------------------------------------------------------------*/
+
+@media only screen and (min-device-width: 1224px){
+
+
+/*--------- HEADER --------------*/
+
+h1{
+    font-size:4rem;
+    font-weight: 700;
+    font-family: 'Kreon', serif;
+    color: white;
+}   
+
+
+header h1{ 
+    font-size:7rem; 
+}
+header{ 
+    background-image: url("./resources/desktop-header@1795x256.jpg");
+    opacity: 0.8;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header i.material-icons{
+    display: none;
+}
+
+.fade-layer{
+    visibility: hidden;
+}
+
+
+/*------------ NAVIGATION --------------*/
+
+nav{
+    position: static;
+    height: 80px;
+    width: auto;
+    font-size: 1.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: rgba(219,200,183);
+}
+
+
+/* --------------MAIN ------------*/
+
+main{
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+}
+
+main h1, h2{
+    font-size: 3rem;
+}
+
+.allcards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.allcards > article {
+    margin: 0 0 2rem; 
+    width: 30rem;
+    height: 50  rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    animation-name: card;
+    animation-duration: 4s;
+}
+
+.card p{
+    margin: 0;
+    height: 300px;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
+.button-card {
+    margin: 1rem;
+    padding:3px 25px;
+    font-size: 1.5rem;
+    border-radius:40px; 
+    
+    
+}
+
+/*-------------Aside-----------*/
+
+.infobox h2{
+    font-size: 2rem;
+}
+
+.infobox p{
+    padding: 1rem 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+.infobox {
+    margin: 0 0 2rem;
+    width: auto;
+    height: auto;
+}
+
+input[type="email"] #button-submit {
+    width: 20px;
+    height: 10px;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 6px 0;
+}
+
+#button-submit{
+    font-size: 15px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* -----------To the top button ----------*/
+
+.scrollTop{
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #556273;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+}
+
+/* --------------FOOTER ------------------*/
+
+footer{
+    height: 300px;
+    padding: 0 150px;
+}
+
+footer a{
+    font-size: 2rem;
+   
+}
+
+
+/*---------------------------------------------- Genres desktop---------------------------------------------------------------------*/
+
+.genre-container{
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-gap: 1em;
+}
+
+.card-genre h1{
+    padding: 0;
+    color: rgb(219,200,183);
+    font-size: 2rem;
+}
+
+
+.card-genre a{
+    width:100%;
+    text-align:center;
+}
+
+.card-genre{
+    min-width:100px;
+    height: 15rem;
+    color: rgb(219,200,183);
+    background-color: #556273;
+    border: none;
+    animation-name: card;
+    animation-duration: 6s;
+    transition: all 0.3s ease 0.4s;
+}
+
+.card-genre:hover{
+    margin: -2rem -2rem 0;   
+     
+}
+
+.button-genre {
+    font-family: ubuntu;
+    font-size: 20px;
+    font-weight: 500;
+    text-align:center;
+    color: #dbc8b7;
+    background-color: #556273;
+    animation-name: card;
+    animation-duration: 6s;
+}
+
+
+
+@keyframes card {
+    from {background-color: #dbc8b7;}
+    to {background-color:#556273;}
+}
+
+
+/*------------------------------------------BLOG ENTRY  desktop------------------------------------*/
+
+.blogentry p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;   
+}
+
+.blogentry h3{
+    font-size: 2.5rem;   
+}
+
+.blogentry{
+    margin: 10% 20%;
+    padding: 2rem;
+}
+
+/* -----------------------------------FANTASY------------------------------------*/
+
+.fantasy{
+margin: auto;
+height: 300px;
+width:700px;
+}
+
+ul {
+
+list-style-type: none;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.book-card{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.book-info{
+    margin: 1rem;
+    padding: 1rem;
+    background-color:  rgb(183,203,194);
+    height: 500px;
+    width: 450px;
+    border-radius: 4% ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.book-button{
+    border: none;
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color:  rgb(183,203,194);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
