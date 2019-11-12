@@ -11,7 +11,7 @@ body{
 h1{
     margin: 1rem 2rem 0 2rem;
     font-family: 'Kreon', serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgb(143,132,130);
 }
 
@@ -106,6 +106,12 @@ nav a:hover{
     background-color: #556273;
 }
 
+.card p{
+    font-size: 1,2rem;
+    height: 200px;
+    overflow: hidden;
+}
+
 .button-card{
 	-moz-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
 	-webkit-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
@@ -122,7 +128,7 @@ nav a:hover{
     font-size:1rem;
 	padding:4px 16px;
 	text-decoration:none;
-    margin-bottom: 3rem;
+    margin: 2rem;
 }
     
 .button-card:hover {
@@ -142,11 +148,6 @@ nav a:hover{
     padding: 20px;
 }
 
-/*.infobox img{
-    width: 60%;
-    height: auto;
-}
-*/
 /* ----------- Welcome text --------------*/
 
 .profile-pic{
@@ -162,6 +163,22 @@ nav a:hover{
     color: white; 
     border:none;
 }
+
+
+/* -----------To the top button ----------*/
+
+.scrollTop{
+    margin: 2rem;
+    border: none;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: #556273;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 
 /* -------------------- footer ----------------*/
@@ -200,11 +217,17 @@ footer a{
     justify-content: center;
 }
 
-.button-genre{
-    padding: 0;
-    font-size: 2rem; 
-    border: none; 
-    background-color: #556273
+.card-genre a{
+    min-width:100px;
+    height: 15rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #dbc8b7;
+    background-color: #556273;
 }
 
 
@@ -220,17 +243,57 @@ footer a{
 .blogentry p{
     font-size: 1.2rem; 
 }
-/*.blogentry img{
+.blogentry img{
     width: 100%;
     height: auto; 
 }
-*/
+
 
 .blogentry {
     height: auto;
     margin: 2rem;
     border: 0.3rem solid rgb(143,132,130); 
     background-color: #556273;
+}
+
+
+/* -----------------------------------FANTASY------------------------------------*/
+
+.fantasy{
+   margin:auto;
+   width: auto;
+}
+    
+.hidden{
+    display: none;
+}
+     
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+    
+.book-info{
+    margin: auto;
+    padding: 1rem;
+    background-color:  rgb(183,203,194);
+    height: 370px;
+    width: 250px;
+    border-radius: 4% ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+    
+.book-button-right, .book-button-left{
+    margin: 2rem 2rem;
+    border: none;
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color:  rgb(183,203,194);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -327,7 +390,7 @@ main h1, h2{
 }
 
 .button-card {
-    margin: 1rem;
+    margin: 2rem;
     padding:3px 25px;
     font-size: 1.5rem;
     border-radius:40px; 
@@ -342,7 +405,7 @@ main h1, h2{
 }
 
 .infobox p{
-    padding: 1rem 1rem 3rem;
+    padding: 0,5rem 0,5rem 1rem;
     font-size: 1.5rem;
 }
 
@@ -360,15 +423,11 @@ input[type="email"] #button-submit {
     margin: 6px 0;
 }
 
-#button-submit{
-    font-size: 15px;
-    margin: 1rem;
-    padding: 1rem;
-}
 
 /* -----------To the top button ----------*/
 
 .scrollTop{
+    margin: 2rem;
     border: none;
     height: 50px;
     width: 50px;
@@ -380,7 +439,6 @@ input[type="email"] #button-submit {
   
 }
 
-}
 
 /* --------------FOOTER ------------------*/
 
@@ -413,11 +471,22 @@ footer a{
 
 
 .card-genre a{
-    width:100%;
-    text-align:center;
+    min-width:100px;
+    height: 15rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #dbc8b7;
+    background-color: #556273;
+    animation-name: card;
+    animation-duration: 6s;
 }
 
 .card-genre{
+    margin: 4rem;
     min-width:100px;
     height: 15rem;
     color: rgb(219,200,183);
@@ -432,19 +501,6 @@ footer a{
     margin: -2rem -2rem 0;   
      
 }
-
-.button-genre {
-    font-family: ubuntu;
-    font-size: 20px;
-    font-weight: 500;
-    text-align:center;
-    color: #dbc8b7;
-    background-color: #556273;
-    animation-name: card;
-    animation-duration: 6s;
-}
-
-
 
 @keyframes card {
     from {background-color: #dbc8b7;}
@@ -473,38 +529,53 @@ footer a{
 /* -----------------------------------FANTASY------------------------------------*/
 
 .fantasy{
-margin: auto;
-height: 300px;
-width:700px;
+    margin: auto;
 }
-
-ul {
-
-list-style-type: none;
-}
-
 
 .hidden{
     display: none;
 }
 
-.book-card{
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+.thing-3{
+    height: 700px;
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    
 }
 
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.book-button-left{
+    grid-area: 2 /1 /2 /2;
+    align-self: center;
+    justify-self: center;
+}
+
+.book-button-right{
+    grid-area: 2 /3 /2 /4;
+    align-self: center;
+    justify-self: center;
+}
+
+.book-card{
+    grid-area: 2/2/2/3;
+    align-self: center;
+}
 .book-info{
-    margin: 1rem;
+    height: 60%;
+    width: 80%;
     padding: 1rem;
+    display: inline-block;
     background-color:  rgb(183,203,194);
-    height: 500px;
-    width: 450px;
     border-radius: 4% ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.book-button{
+.book-button-right, .book-button-left{
     border: none;
     height: 40px;
     width: 40px;
@@ -513,4 +584,4 @@ justify-content: space-evenly;
     border-radius: 50%;
     background-color:  rgb(183,203,194);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+}}

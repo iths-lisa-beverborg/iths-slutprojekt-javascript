@@ -79,7 +79,7 @@ function checkTitle (books, input){
 function render (books){
     document.querySelector("ul").remove()
     let list = document.createElement ("ul")
-    document.querySelector('.thing-3').appendChild(list)
+    document.querySelector(".book-list").appendChild(list)
     for (let item of books){
         let listItem = document.createElement ("li")
         listItem.innerText = item.title
@@ -93,7 +93,7 @@ function render (books){
             //document.querySelector(".book-info").remove()
             
             let leftBtn = document.createElement("button")
-            leftBtn.classList.add("book-button")
+            leftBtn.classList.add("book-button-left")
             leftBtn.innerText = "<"
             document.querySelector(".thing-3").appendChild(leftBtn);
             console.log(listItem.innerText)
@@ -117,7 +117,7 @@ function render (books){
                  
             })
             let rightBtn = document.createElement("button")
-            rightBtn.classList.add("book-button")
+            rightBtn.classList.add("book-button-right")
             rightBtn.innerText = ">"
             document.querySelector(".thing-3").appendChild(rightBtn);
 
