@@ -1,4 +1,4 @@
-let books = [
+let library = [
     {
         author: "J.K.Rowling",
         title: "The Philosopher's Stone",
@@ -52,13 +52,10 @@ let books = [
 
 let input = document.querySelector("input")
 let searchResult
-
-
-
-
-
+let BooksContainer = document.querySelector("article.books-container")
 let submitButton = document.createElement("button");
 submitButton.innerText = "Submit"
+submitButton.classList.add("book-submit")
 document.querySelector(".fantasy").appendChild(submitButton);
 
 function checkTitle (books, input){
@@ -66,15 +63,12 @@ function checkTitle (books, input){
     for (let i= 0; i< books.length; i++){
         let currentBooks = books[i].title.toLowerCase()
         let currentInput = input.toLowerCase()
-        if (currentBooks.includes (currentInput)){  //input.value
+        if (currentBooks.includes (currentInput)){  
             temp.push (books[i])
         }
     }        
     return temp
 }
-//console.log (checkTitle(books, input))
-
-
 
 function render (books){
     document.querySelector("ul").remove()
@@ -84,74 +78,52 @@ function render (books){
         let listItem = document.createElement ("li")
         listItem.innerText = item.title
         list.appendChild(listItem)
-        console.log(listItem)
         
-        
-        //build virtual DOM and show bookinfo
         listItem.addEventListener("click", function (){
             document.querySelector("ul").remove()
-            //document.querySelector(".book-info").remove()
-            
             let leftBtn = document.createElement("button")
             leftBtn.classList.add("book-button-left")
             leftBtn.innerText = "<"
-            document.querySelector(".thing-3").appendChild(leftBtn);
-            console.log(listItem.innerText)
+            document.querySelector(".books-container").appendChild(leftBtn);
             let currentBook = searchResult.find(function(element) {
                 return element.title == listItem.innerText;
             });
-
-            let currentIndex = books.indexOf(currentBook);
-              console.log(currentIndex)
-              
-              
-
-              leftBtn.addEventListener("click", function(){
-                  if (currentIndex == 0) {
-                    currentIndex = books.length - 1;
+            
+            let currentIndex = library.indexOf(currentBook);
+            
+            leftBtn.addEventListener("click", function(){
+                if (currentIndex == 0) {
+                    currentIndex = library.length - 1;
                 } else {
                     currentIndex--;
                 }
-
-                renderBook(c, books[currentIndex]); 
-                 
+                renderBook(BooksContainer, library[currentIndex]); 
+                
             })
             let rightBtn = document.createElement("button")
             rightBtn.classList.add("book-button-right")
             rightBtn.innerText = ">"
-            document.querySelector(".thing-3").appendChild(rightBtn);
-
-
+            document.querySelector(".books-container").appendChild(rightBtn);
+            
             rightBtn.addEventListener("click", function(){
-               if (currentIndex  >= books.length-1){
-                currentIndex = 0 
-              } else {
-                  currentIndex++;
-              }
-
-              renderBook(c, books[currentIndex]); 
-               
-          })
-
-            renderBook(c, item)
+                if (currentIndex  >= library.length-1){
+                    currentIndex = 0 
+                } else {
+                    currentIndex++;
+                }
+                renderBook(BooksContainer, library[currentIndex]);    
+            })
+            renderBook(BooksContainer, item)
         })
-        
-        
-    }
-
-    
+    }  
 }
 
-
 function renderBook (article, books){
-    
     let oldBook = article.querySelector(".book-card")
     if(oldBook != null){
         oldBook.remove()
     }
-
     
-
     let bookCard = document.createElement ("div")
     bookCard.classList.add("book-card")
     article.append(bookCard); 
@@ -163,7 +135,6 @@ function renderBook (article, books){
     let bookTitle = document.createElement("h2")
     bookTitle.innerText = books.title
     info.appendChild(bookTitle);
-    
     
     let bookAuthor = document.createElement("h3")
     bookAuthor.innerText = books.author
@@ -183,7 +154,7 @@ function renderBook (article, books){
 }
 
 function bookInfo (event){
-    searchResult = checkTitle(books, input.value) 
+    searchResult = checkTitle(library, input.value) 
     if(searchResult.length != 0){    
         render(searchResult)
     } else{
@@ -191,12 +162,15 @@ function bookInfo (event){
         error.innerText = "Book not found!" 
     }
 }
+
 submitButton.addEventListener ("click", bookInfo)
 
 
 
-let a = document.querySelector("article.thing-2")
 
 
 
-let c = document.querySelector("article.thing-3")
+
+
+
+

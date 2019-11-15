@@ -1,6 +1,5 @@
 
 /* Core Styles */
-
 body{
     margin: 0;
     background-color: rgb(219,200,183);
@@ -26,9 +25,7 @@ p{
     font-weight: 300;
 }
 
-
 /* ------------- HEADER ----------------*/
-
 header{
     height: 30vh;
     padding: 10px;
@@ -46,9 +43,7 @@ header i.material-icons{
     font-size: 2rem;  
 }
 
-
 /* --------- Navigation -----------*/
-
 nav{
     display:flex;
     flex-direction: column; 
@@ -92,16 +87,14 @@ nav a:hover{
     background-color: rgba(0,0,0,0.25) 
 }
 
-
 /* ------------- MAIN/ CARDS -------------------*/
-
 .card img{
     width: 100%;
     height: auto;
 }
 
 .card{
-    margin: 2rem;
+    margin: 1rem 2rem;
     border: 0.3rem solid rgb(143,132,130);   
     background-color: #556273;
 }
@@ -112,7 +105,7 @@ nav a:hover{
     overflow: hidden;
 }
 
-.button-card{
+.button-card, .popup-close{
 	-moz-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
 	-webkit-box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
 	box-shadow: 1px 1px 2px 0px  rgb(183,203,194);
@@ -135,9 +128,7 @@ nav a:hover{
 	background-color: rgb(241,242,237);
 }
 
-
 /*-------------- Aside ----------------*/
-
 .infobox{
     background-color: rgb(183,203,194); 
     margin: 0 0  4em 0;
@@ -149,13 +140,11 @@ nav a:hover{
 }
 
 /* ----------- Welcome text --------------*/
-
 .profile-pic{
     border-radius: 50%;
 }
 
 /* ----------------Newsletter-------------*/
-
 #button-submit{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
@@ -164,9 +153,32 @@ nav a:hover{
     border:none;
 }
 
+/*----------------------submit button-----------------*/
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+    opacity: .95;
+    visibility: hidden;
+    background-color: #556273;
+}
+
+.popup-close{
+    margin: 2rem;
+    padding:3px 25px;
+    font-size: 1.5rem;
+    border-radius:40px; 
+}
+
+.messages{
+    height: 200px;
+    width: 200px;
+}
 
 /* -----------To the top button ----------*/
-
 .scrollTop{
     margin: 2rem;
     border: none;
@@ -180,9 +192,7 @@ nav a:hover{
 }
 
 
-
 /* -------------------- footer ----------------*/
-
 footer{
     height: 200px;
     padding: 20px;
@@ -203,9 +213,7 @@ footer a{
     font-weight: 700;
 }
 
-
 /* -----------------Genre mobile page -------------------*/
-
 .card-genre{
     height:12rem;
     margin: 2rem;
@@ -230,9 +238,7 @@ footer a{
     background-color: #556273;
 }
 
-
 /*--------------------Blog entry mobile---------------------*/
-
 .blogentry h3{
     margin: 1rem;
     font-family: 'Kreon', serif;
@@ -256,9 +262,7 @@ footer a{
     background-color: #556273;
 }
 
-
 /* -----------------------------------FANTASY------------------------------------*/
-
 .fantasy{
    margin:auto;
    width: auto;
@@ -296,21 +300,17 @@ ul {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 /*-------------------------------------------------------------------------------------DESKTOP-------------------------------------------------------------------------------*/
 
 @media only screen and (min-device-width: 1224px){
 
-
 /*--------- HEADER --------------*/
-
 h1{
     font-size:4rem;
     font-weight: 700;
     font-family: 'Kreon', serif;
     color: white;
 }   
-
 
 header h1{ 
     font-size:7rem; 
@@ -334,9 +334,7 @@ header i.material-icons{
     visibility: hidden;
 }
 
-
 /*------------ NAVIGATION --------------*/
-
 nav{
     position: static;
     height: 80px;
@@ -350,7 +348,6 @@ nav{
 nav a:hover{
     background-color: rgba(219,200,183);
 }
-
 
 /* --------------MAIN ------------*/
 
@@ -374,7 +371,6 @@ main h1, h2{
 .allcards > article {
     margin: 0 0 2rem; 
     width: 30rem;
-    height: 50  rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;  
@@ -393,13 +389,10 @@ main h1, h2{
     margin: 2rem;
     padding:3px 25px;
     font-size: 1.5rem;
-    border-radius:40px; 
-    
-    
+    border-radius:40px;   
 }
 
 /*-------------Aside-----------*/
-
 .infobox h2{
     font-size: 2rem;
 }
@@ -415,17 +408,30 @@ main h1, h2{
     height: auto;
 }
 
-input[type="email"] #button-submit {
-    width: 20px;
-    height: 10px;
-    font-size: 20px;
-    padding: 1rem;
-    margin: 6px 0;
+/*----------------------submit email sign up-----------------*/
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    opacity: .95;
+    visibility: hidden;
+    background-color: rgb(143,132,130);
 }
 
+.popup-close{
+    margin: 2rem;
+    padding:3px 25px;
+    font-size: 1.5rem;
+    border-radius:40px; 
+}
+
+.messages{
+    height: 200px;
+    width: 200px;
+}
 
 /* -----------To the top button ----------*/
-
 .scrollTop{
     margin: 2rem;
     border: none;
@@ -435,10 +441,8 @@ input[type="email"] #button-submit {
     font-weight: 700;
     border-radius: 50%;
     background-color: #556273;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
-
 
 /* --------------FOOTER ------------------*/
 
@@ -448,13 +452,10 @@ footer{
 }
 
 footer a{
-    font-size: 2rem;
-   
+    font-size: 2rem;   
 }
 
-
-/*---------------------------------------------- Genres desktop---------------------------------------------------------------------*/
-
+/*---------------------------------------------- Genres desktop--------------------------------------------------------*/
 .genre-container{
     margin: 5rem;
     display: grid;
@@ -468,7 +469,6 @@ footer a{
     color: rgb(219,200,183);
     font-size: 2rem;
 }
-
 
 .card-genre a{
     min-width:100px;
@@ -498,8 +498,7 @@ footer a{
 }
 
 .card-genre:hover{
-    margin: -2rem -2rem 0;   
-     
+    transform: scale(1.1);      
 }
 
 @keyframes card {
@@ -507,9 +506,7 @@ footer a{
     to {background-color:#556273;}
 }
 
-
 /*------------------------------------------BLOG ENTRY  desktop------------------------------------*/
-
 .blogentry p{
     font-size: 1.5rem;
     font-weight: 400;
@@ -527,6 +524,13 @@ footer a{
 }
 
 /* -----------------------------------FANTASY------------------------------------*/
+.button-submit {
+    width: 20px;
+    height: 10px;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 6px 0;
+}
 
 .fantasy{
     margin: auto;
@@ -536,12 +540,10 @@ footer a{
     display: none;
 }
 
-.thing-3{
-    height: 700px;
+.books-container{
     margin: 4rem;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
-    
+    grid-template-columns: 25% 50% 25%;   
 }
 
 ul {
@@ -550,21 +552,22 @@ ul {
 }
 
 .book-button-left{
-    grid-area: 2 /1 /2 /2;
+    grid-area: 1 /1 /1 /2;
     align-self: center;
     justify-self: center;
 }
 
 .book-button-right{
-    grid-area: 2 /3 /2 /4;
+    grid-area: 1 /3 /1 /4;
     align-self: center;
     justify-self: center;
 }
 
 .book-card{
-    grid-area: 2/2/2/3;
+    grid-area: 1/2/1/3;
     align-self: center;
 }
+
 .book-info{
     height: 60%;
     width: 80%;
@@ -585,3 +588,10 @@ ul {
     background-color:  rgb(183,203,194);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }}
+
+/*-------------------Fantasy GOT -----------------*/
+.name p{
+    padding: 0;
+}
+
+
